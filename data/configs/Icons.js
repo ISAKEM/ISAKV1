@@ -1,25 +1,25 @@
 const data = {
     //______________________________________________________________________________//
 
-    "Animation-logo": "ElainaFly.gif",
+    "Animation-logo": "IsakFly.gif",
     "Static-logo"   : "Logo.png",
 
-    "Avatar"        : "Avatar.gif",
-    "Border"        : "spirit-of-ionia-crests-wild-rift.png",
-    "Regalia-banner": "Soul-Fighters_2023.png",
+    "Avatar"        : "Avatar2.gif",
+    "Border"        : "S9-Challenger.png",
+    "Regalia-banner": "Challenger.png",
     "Hover-card"    : "Hover-card-backdrop.jpg",
 
-    "RP-icon"       : "ApprenticeWitch.png",
-    "BE-icon"       : "ElainaStare.png",
+    "RP-icon"       : "rp.webp",
+    "BE-icon"       : "IsakStare.png",
 
-    "Rank-icon"     : "Rank.png",
+    "Rank-icon"     : "S9-Challenger.webp",
     "Honor"         : "emblem_5.png",
     "Trophy"        : "trophy_empty.png",
     "Class-banner"  : "Clash.png",
 
     "Ticker"        : "ticker.png",
     
-    "Mouse-cursor"  : "ElainaDed.png",
+    "Mouse-cursor"  : "IsakDed.png",
 
     //Runes
     "Precision"  : "8000.jpg",

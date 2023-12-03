@@ -175,15 +175,15 @@ window.setInterval(()=>{
 				gameinfo.querySelector("div > div.parties-status-card-header").style.visibility = "hidden"
 
 			let cardbody = gameinfo.querySelector("div > div.parties-status-card-body").style
-				cardbody.marginTop = "-23px"
+				cardbody.marginTop = "-27px"
 				cardbody.padding = "10px 5px 10px 10px"
-				cardbody.border = "1px solid #8c8263"
+				cardbody.border = "2px solid #8c8263"
 				cardbody.borderRadius = "10px"
 
 			let gamesearch = document.querySelector("lol-social-panel > lol-parties-game-info-panel").shadowRoot.querySelector("div > div.parties-game-info-panel-content > lol-parties-game-search").shadowRoot
-				gamesearch.querySelector("div").style.border = "1px solid #8c8263"
+				gamesearch.querySelector("div").style.border = "2px solid #8c8263"
 				gamesearch.querySelector("div").style.borderRadius = "10px"
-				gamesearch.querySelector("div").style.marginTop = "9px"
+				gamesearch.querySelector("div").style.marginTop = "-2px"
 				gamesearch.querySelector("div > div.parties-game-search-divider").style.display = "none"
 
 			document.querySelector("lol-social-panel > lol-parties-game-info-panel").shadowRoot.querySelector("div > div.parties-game-info-panel-bg-container").style.backgroundImage = "none"

@@ -1,4 +1,4 @@
-import {openAssets, openConfigs, getPluginsName} from "../openFolder.js"
+import {openAssets, openConfigs, getPluginsName, openRenzskin} from "../openFolder.js"
 import LocalKey from "../UpdateKey-Local.js"
 
 let lang,thisVersion,CdnKey
@@ -6,22 +6,22 @@ let datapath = new URL("..", import.meta.url).href
 
 try {
 	if (DataStore.get("Dev-mode")) {
-		let res = await fetch(`//plugins/${getPluginsName()}/ElainaV3-Data/data/configs/UpdateKey-CDN.js`)
+		let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/data/configs/UpdateKey-CDN.js`)
 		if (res.status == 200) {
-			CdnKey = (await (() => import(`//plugins/${getPluginsName()}/ElainaV3-Data/data/configs/UpdateKey-CDN.js`))()).default
+			CdnKey = (await (() => import(`//plugins/${getPluginsName()}/Server-Data/data/configs/UpdateKey-CDN.js`))()).default
 		}
 	}
 	else {
-		let res = await fetch("https://unpkg.com/elainav3-data@latest/data/configs/UpdateKey-CDN.js")
+		let res = await fetch("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/UpdateKey-CDN.js")
 		if (res.status == 200) {
-			CdnKey = (await (() => import("https://unpkg.com/elainav3-data@latest/data/configs/UpdateKey-CDN.js"))()).default
+			CdnKey = (await (() => import("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/UpdateKey-CDN.js"))()).default
 		}
 	}
 
 	if (CdnKey == LocalKey) {
-		let res = await fetch("https://unpkg.com/elainav3-data@latest/data/configs/Version.js")
+		let res = await fetch("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/Version.js")
 		if (res.status == 200) {
-			thisVersion = (await (() => import("https://unpkg.com/elainav3-data@latest/data/configs/Version.js"))()).default
+			thisVersion = (await (() => import("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/Version.js"))()).default
 			DataStore.set("Theme-version", thisVersion)
 		}
 	}
@@ -30,15 +30,15 @@ catch{console.warn(`File doesn't exist`)}
 
 try  {
 	if (DataStore.get("Dev-mode")) {
-		let res = await fetch(`//plugins/${getPluginsName()}/ElainaV3-Data/data/configs/Language.js`)
+		let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/data/configs/Language.js`)
 		if (res.status == 200) {
-			lang = (await (() => import(`//plugins/${getPluginsName()}/ElainaV3-Data/data/configs/Language.js`))()).default
+			lang = (await (() => import(`//plugins/${getPluginsName()}/Server-Data/data/configs/Language.js`))()).default
 		}
 	}
 	else {
-		let res = await fetch("https://unpkg.com/elainav3-data@latest/data/configs/Language.js")
+		let res = await fetch("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/Language.js")
 		if (res.status == 200) {
-			lang = (await (() => import("https://unpkg.com/elainav3-data@latest/data/configs/Language.js"))()).default
+			lang = (await (() => import("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/Language.js"))()).default
 		}
 	}
 }
@@ -83,12 +83,12 @@ async function createLoaderMenu(root) {
 							<div class="dialog-content">
 								<lol-uikit-content-block class="app-controls-exit-dialog" type="dialog-medium" style="position: relative; overflow: hidden">
 									<div style="position: absolute; top: 60px">
-										<img src="${datapath}assets/Icon/Plugins-icons/LL-Settings.jpg" style="object-fit: cover; width: 290px; transform: scale(2.5); margin-left: 100px; filter: brightness(0.7)">
+										<img src="${datapath}assets/Icon/Plugins-icons/LL-Settings.jpg" style="object-fit: cover; width: 290px; transform: scale(1.6); margin-left: 60px; margin-top: -47px; filter: brightness(0.7)">
 									</div>
 									</div>
 									<div style="position: relative">
 										<div style="margin-bottom: 24px"> 
-											<h4 style="padding: 6px 0">Elaina-V3</h4>
+											<h4 style="padding: 6px 0">ISAK V1</h4>
 											<p>v${version}</p>
 										</div>
 										<hr class="heading-spacer" />
@@ -101,6 +101,9 @@ async function createLoaderMenu(root) {
 											</lol-uikit-flat-button-secondary>
 											<lol-uikit-flat-button-secondary style="display:inline-block; width: 250px" onClick=${() => openConfigs()}>
 												${_t['l.open_configs']}
+											</lol-uikit-flat-button-secondary>
+											<lol-uikit-flat-button-secondary style="display:inline-block; width: 250px" onClick=${() => openRenzskin()}>
+												${_t['l.open_renzskin']}
 											</lol-uikit-flat-button-secondary>
 										</div>
 										<hr class="heading-spacer" />

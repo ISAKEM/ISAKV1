@@ -1,16 +1,14 @@
 /**
- * @name ElainaV3
- * @author Elaina Da Catto
- * @description Elaina theme 3rd Generation for Pengu Loader
- * @link https://github.com/Elaina69
- * @Nyan Meow~~~
+ * @name ISAK V1
+ * @author Elaina Da Catto/ISAK.M
+ * @description ISAK theme 1st Generation for Pengu Loader
+ * @link https://github.com/ISAKEM
  */
 
-let eConsole = "%c ElainaV3 "
+let eConsole = "%c ISAK V1 "
 let eCss = "color: #ffffff; background-color: #f77fbe"
 
-console.log(eConsole+'%c By %cElaina Da Catto',eCss,"", "color: #e4c2b3")
-console.log(eConsole+'%c Meow ~~~',eCss, "color: #e4c2b3")
+console.log(eConsole+'%c By %cElaina Da Catto/Modified by ISAK.M',eCss,"", "color: #e4c2b3")
 
 export function getPluginsName() {
 	let scriptPath = getScriptPath()
@@ -19,7 +17,7 @@ export function getPluginsName() {
 	let pluginsname = match ? match[1]:null
 	return pluginsname
 }
-export * from "./data/ImportPlugins.js" 
+export * from "./data/ImportSettings.js" 
 
 import "./data/Data.js"
 import "./data/built-in_plugins/Custom-Status"
@@ -52,22 +50,22 @@ window.setInterval(async ()=> {
 },1000)
 
 if (DataStore.get("Dev-mode")) {
-	let res = await fetch(`//plugins/${getPluginsName()}/ElainaV3-Data/index.js`)
+	let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/index.js`)
 	if (res.status == 200) {
-		(await (() => import(`//plugins/${getPluginsName()}/ElainaV3-Data/index.js`))()).default
+		(await (() => import(`//plugins/${getPluginsName()}/Server-Data/index.js`))()).default
 	}
 	else {
-		console.warn(`Failed to load ElainaV3 data`)
-		Toast.error("Failed to load ElainaV3 data")
+		console.warn(`Failed to load ISAK V1 data`)
+		Toast.error("Failed to load ISAK V1 data")
 	}
 }
 else {
-	let res = await fetch("https://unpkg.com/elainav3-data@latest/index.js")
+	let res = await fetch("https://unpkg.com/elainav3-isakmfork-data@latest/index.js")
 	if (res.status == 200) {
-		(await (() => import("https://unpkg.com/elainav3-data@latest/index.js"))()).default
+		(await (() => import("https://unpkg.com/elainav3-isakmfork-data@latest/index.js"))()).default
 	}
 	else {
-		console.warn(`Failed to load ElainaV3 data`)
-		Toast.error("Failed to load ElainaV3 data")
+		console.warn(`Failed to load ISAK V1 data`)
+		Toast.error("Failed to load ISAK V1 data")
 	}
 }

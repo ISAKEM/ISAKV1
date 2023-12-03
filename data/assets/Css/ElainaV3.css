@@ -1,5 +1,6 @@
 /* By Elaina Da Catto */
 /* Meow~~~ */
+/* Modified by ISAK.M */
 
 
 
@@ -352,7 +353,7 @@ lol-social-roster-member .offline .member-name {
 	filter: grayscale(1) saturate(0) brightness(0.5) !important;
 }
 
-#elaina-bg:has(+ #rcp-fe-viewport-root .parties-background) {
+#isak-bg:has(+ #rcp-fe-viewport-root .parties-background) {
 	filter: brightness(0.4) !important;
 }
 
@@ -394,7 +395,7 @@ div[data-screen-name="rcp-fe-lol-tft"] .tft-sub-nav-container {
 
 /*_________________________________________________________________________________________________________________________________*/
 
-#elaina-bg {
+#isak-bg {
 	width:100%;
 	height: 100%;
 	position: absolute;
@@ -591,6 +592,14 @@ div[data-screen-name="rcp-fe-lol-tft"] .tft-sub-nav-container {
 	align-items: flex-end
 }
 
+.renzskin-button-container {
+	position: absolute;
+	right: 20px;
+	bottom: 19px;
+	display: flex;
+	align-items: flex-end
+}
+
 .audio-volume-panel {
 	display: flex;
     bottom: 40px;
@@ -643,25 +652,25 @@ div[data-screen-name="rcp-fe-lol-tft"] .tft-sub-nav-container {
 	position:absolute;
 }
 
-.Elaina1ImageCon {
+.Isak1ImageCon {
 	display: flex;
     bottom: -4px;
     right: 130px;
 	position:absolute
 }
 
-.Elaina1TextCon {
+.Isak1TextCon {
 	display: flex;
     bottom: 260px;
     right: 303px;
 	position:absolute
 }
 
-.Elaina1Image {
+.Isak1Image {
 	width: 650px !important;
 }
 
-.Elaina1Text {
+.Isak1Text {
 	margin: 4px !important;
 	color: rgb(129 185 224) !important;
 	text-align: center !important;
@@ -959,7 +968,7 @@ div[data-screen-name="rcp-fe-lol-tft"] .tft-sub-nav-container {
 	cursor: pointer;
 }
 
-.Elaina-Update {
+.Isak-Update {
 	text-align: left;
 	overflow-wrap: break-word;
 }

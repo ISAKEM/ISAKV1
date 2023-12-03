@@ -5,7 +5,7 @@ let songIndex  = 0
 let datapath = new URL(".", import.meta.url).href
 let path = new URL("..", import.meta.url).href
 let lang
-let eConsole = "%c ElainaV3 "
+let eConsole = "%c ISAK V1 "
 let eCss = "color: #ffffff; background-color: #f77fbe"
 let loopwallCss,muteCss
 if (DataStore.get("mute-audio")) {muteCss = "color: #00ff44"} else {muteCss = "color: red"}
@@ -13,18 +13,18 @@ if (DataStore.get("audio-loop")) {loopwallCss = "color: #00ff44"} else {loopwall
 
 if (DataStore.get("Dev-mode")) {
 	try  {
-		let res = await fetch(`${path}ElainaV3-Data/data/configs/Language.js`)
+		let res = await fetch(`${path}Server-Data/data/configs/Language.js`)
 		if (res.status == 200) {
-			lang = (await (() => import(`${path}ElainaV3-Data/data/configs/Language.js`))()).default
+			lang = (await (() => import(`${path}Server-Data/data/configs/Language.js`))()).default
 		}
 	}
 	catch{console.warn(`File doesn't exist`)}
 }
 else {
 	try  {
-		let res = await fetch("https://unpkg.com/elainav3-data@latest/data/configs/Language.js")
+		let res = await fetch("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/Language.js")
 		if (res.status == 200) {
-			lang = (await (() => import("https://unpkg.com/elainav3-data@latest/data/configs/Language.js"))()).default
+			lang = (await (() => import("https://unpkg.com/elainav3-isakmfork-data@latest/data/configs/Language.js"))()).default
 		}
 	}
 	catch{console.warn(`File doesn't exist`)}
@@ -51,12 +51,12 @@ else if(DataStore.get('wallpaper-index')+1>DataStore.get("Wallpaper-list").lengt
 
 let nodeRemovedEvent = function (event) {
 	if (event.target.classList && event.target.classList.contains("lol-loading-screen-container")) {
-		let elainaBg     = document.getElementById("elaina-bg")
+		let isakBg     = document.getElementById("isak-bg")
 		let viewportRoot = document.getElementById("rcp-fe-viewport-root")
 
-		if (!elainaBg || !viewportRoot) {return}
+		if (!isakBg || !viewportRoot) {return}
 		viewportRoot.style.filter = "none"
-		elainaBg.style.filter     = filters["Homepage"]
+		isakBg.style.filter     = filters["Homepage"]
 		document.removeEventListener("DOMNodeRemoved", nodeRemovedEvent)
 	}
 }
@@ -69,39 +69,39 @@ function create_element(tagName, className, content) {
 }
 
 function go_to_default_home_page() {
-	document.querySelector(`lol-uikit-navigation-item[item-id='elaina-home']`).click()
+	document.querySelector(`lol-uikit-navigation-item[item-id='isak-home']`).click()
 }
 
-function add_elaina_home_page() {
+function add_isak_home_page() {
 	let lol_home = document.querySelector(".rcp-fe-lol-home > lol-uikit-section-controller")
 
 	if (lol_home) {
-		if (!lol_home.querySelector("[section-id='elaina-home']")) {
-			let elaina_home = create_element("lol-uikit-section", "")
+		if (!lol_home.querySelector("[section-id='isak-home']")) {
+			let isak_home = create_element("lol-uikit-section", "")
 			let div         = create_element("div", "wrapper")
 
-			div.id = "elaina-home"
-			elaina_home.setAttribute("section-id", "elaina-home")
-			elaina_home.append(div)
-			lol_home.prepend(elaina_home)
+			div.id = "isak-home"
+			isak_home.setAttribute("section-id", "isak-home")
+			isak_home.append(div)
+			lol_home.prepend(isak_home)
 		}
 	}
 }
 
-function add_elaina_home_navbar() {
+function add_isak_home_navbar() {
 	let navbar = document.querySelector(".rcp-fe-lol-home > lol-uikit-navigation-bar")
 
 	if (navbar) {
-		if (!navbar.querySelector("[item-id='elaina-home']")) {
-			let elaina_home_navbar_item = create_element("lol-uikit-navigation-item", "")
+		if (!navbar.querySelector("[item-id='isak-home']")) {
+			let isak_home_navbar_item = create_element("lol-uikit-navigation-item", "")
 			let langCode = document.querySelector("html").lang;
 			let langMap = lang.langlist
 
-			elaina_home_navbar_item.setAttribute("item-id", "elaina-home")
-			elaina_home_navbar_item.setAttribute("priority", 1)
-			elaina_home_navbar_item.textContent = lang[langMap[langCode] || "EN"]["home"]
+			isak_home_navbar_item.setAttribute("item-id", "isak-home")
+			isak_home_navbar_item.setAttribute("priority", 1)
+			isak_home_navbar_item.textContent = lang[langMap[langCode] || "EN"]["home"]
 
-			navbar.prepend(elaina_home_navbar_item)
+			navbar.prepend(isak_home_navbar_item)
 		}
 	}
 }
@@ -113,10 +113,10 @@ function patch_default_home_page(){
 	}, 100)
 }
 
-function elaina_play_pause() {
-	let elaina_bg_elem = document.getElementById("elaina-bg")
-	if (DataStore.get('pause-wallpaper')%2==0) {elaina_bg_elem.pause()}
-	else {elaina_bg_elem.play()}
+function isak_play_pause() {
+	let isak_bg_elem = document.getElementById("isak-bg")
+	if (DataStore.get('pause-wallpaper')%2==0) {isak_bg_elem.pause()}
+	else {isak_bg_elem.play()}
 }
 
 function play_pause_set_icon(elem) {
@@ -155,7 +155,7 @@ function play_pause_set_icon_audio(elem) {
 
 function audio_mute() {
 	let audio          = document.getElementById("bg-audio")
-	let wallpaperaudio = document.getElementById("elaina-bg")
+	let wallpaperaudio = document.getElementById("isak-bg")
 
 	if (DataStore.get("mute-audio")) {
 		wallpaperaudio.muted = true
@@ -210,8 +210,8 @@ function audio_loop_icon(elem) {
 }
 
 function loadBG(BG) {
-	let elainaBg = document.getElementById("elaina-bg")
-	elainaBg.src = `${datapath}assets/Backgrounds/Wallpapers/${BG}`
+	let isakBg = document.getElementById("isak-bg")
+	isakBg.src = `${datapath}assets/Backgrounds/Wallpapers/${BG}`
 }
 
 function loadSong(song) {
@@ -220,8 +220,8 @@ function loadSong(song) {
 }
 
 function next_wallpaper() {
-	let elainaBg = document.getElementById("elaina-bg")
-		elainaBg.classList.add("webm-hidden")
+	let isakBg = document.getElementById("isak-bg")
+		isakBg.classList.add("webm-hidden")
 
 	DataStore.set('wallpaper-index', DataStore.get('wallpaper-index')+1)
     if (DataStore.get('wallpaper-index') > DataStore.get("Wallpaper-list").length-1) {
@@ -231,14 +231,14 @@ function next_wallpaper() {
 
 	setTimeout(function () {
 		loadBG(DataStore.get("Wallpaper-list")[DataStore.get('wallpaper-index')])
-		elaina_play_pause()
-		elainaBg.classList.remove("webm-hidden")
+		isak_play_pause()
+		isakBg.classList.remove("webm-hidden")
 	}, 500)
 }
 
 function prev_wallpaper() {
-	let elainaBg = document.getElementById("elaina-bg")
-		elainaBg.classList.add("webm-hidden")
+	let isakBg = document.getElementById("isak-bg")
+		isakBg.classList.add("webm-hidden")
 
 	DataStore.set('wallpaper-index', DataStore.get('wallpaper-index')-1)
     if (DataStore.get('wallpaper-index') < 0) {
@@ -248,8 +248,8 @@ function prev_wallpaper() {
 
 	setTimeout(function () {
 		loadBG(DataStore.get("Wallpaper-list")[DataStore.get('wallpaper-index')])
-		elaina_play_pause()
-		elainaBg.classList.remove("webm-hidden")
+		isak_play_pause()
+		isakBg.classList.remove("webm-hidden")
 	}, 500)
 }
 
@@ -361,7 +361,7 @@ function create_webm_buttons() {
 	})	
 	pauseBg.addEventListener("click", () => {
 		DataStore.set('pause-wallpaper', DataStore.get('pause-wallpaper') + 1)
-		elaina_play_pause()
+		isak_play_pause()
 		play_pause_set_icon()
 	})
 	muteAudio.addEventListener("click", () => {
@@ -427,15 +427,15 @@ function create_webm_buttons() {
 			el.setAttribute("slot", "lol-uikit-dropdown-option")
 			el.innerText = opt
 			el.onclick = () => {
-				let elainaBg = document.getElementById("elaina-bg")
-				elainaBg.classList.add("webm-hidden")
+				let isakBg = document.getElementById("isak-bg")
+				isakBg.classList.add("webm-hidden")
 				DataStore.set('wallpaper-index', id)
 				console.log(eConsole+`%c Now playing %c${DataStore.get("Wallpaper-list")[DataStore.get('wallpaper-index')]}`,eCss,"","color: #0070ff")
 
 				setTimeout(function () {
 					loadBG(DataStore.get("Wallpaper-list")[DataStore.get('wallpaper-index')])
-					elaina_play_pause()
-					elainaBg.classList.remove("webm-hidden")
+					isak_play_pause()
+					isakBg.classList.remove("webm-hidden")
 				}, 500)
 			}
 			if (DataStore.get('wallpaper-index') == id) {
@@ -459,8 +459,8 @@ let addHomepage = async (node) => {
     if (pagename == "rcp-fe-lol-home-main") {
 		if (!document.getElementsByClassName("webm-bottom-buttons-container").length) {
 			create_webm_buttons()
-			add_elaina_home_page()
-			add_elaina_home_navbar()
+			add_isak_home_page()
+			add_isak_home_navbar()
 			go_to_default_home_page()
 			if (previous_page == "rcp-fe-lol-parties" ){
 				patch_default_home_page()
@@ -499,9 +499,9 @@ let addHomepage = async (node) => {
     if (previous_page != pagename) {previous_page = pagename}
 }
 if (DataStore.get("Dev-mode")) {
-	console.log(eConsole+"%c Running %cElaina theme - %cDev %cversion",eCss,"","color: #e4c2b3","color: red","")
+	console.log(eConsole+"%c Running %cIsak theme - %cDev %cversion",eCss,"","color: #e4c2b3","color: red","")
 }
-else {console.log(eConsole+"%c Running %cElaina theme - %cStable %cversion",eCss,"","color: #e4c2b3","color: #00ff44","")}
+else {console.log(eConsole+"%c Running %cIsak theme - %cStable %cversion",eCss,"","color: #e4c2b3","color: #00ff44","")}
 if (DataStore.get("Continues_Audio")) {
 	console.log(eConsole+`%c Now playing %c${DataStore.get("Wallpaper-list")[DataStore.get('wallpaper-index')]} %cand %c${DataStore.get("Audio-list")[DataStore.get('audio-index')]}`,eCss,"","color: #0070ff","","color: #0070ff")
 	console.log(eConsole+`%c current wallpaper status: play/pause-time: %c${DataStore.get('pause-wallpaper')}%c, mute: %c${DataStore.get("mute-audio")}%c, loop: %ctrue%c, volume: %c${DataStore.get("wallpaper-volume")*100}%`,eCss,"","color: #0070ff","",muteCss,"","color: #00ff44","","color: #0070ff")
@@ -525,7 +525,7 @@ window.setInterval(()=> {
 window.addEventListener("load", ()=> {
     const video = document.createElement('video')
 	const audio = document.createElement("audio")
-		video.id       = 'elaina-bg'
+		video.id       = 'isak-bg'
 		video.autoplay = true
 		video.loop     = true
 		video.src      = `${datapath}assets/Backgrounds/Wallpapers/${DataStore.get("Wallpaper-list")[DataStore.get('wallpaper-index')]}`
@@ -543,17 +543,17 @@ window.addEventListener("load", ()=> {
 	if (!DataStore.get("audio-loop")) {audio.addEventListener("ended", nextSong)}
 	document.querySelector("body").prepend(video)
     document.querySelector("body").prepend(audio)
-	elaina_play_pause()
+	isak_play_pause()
 
     utils.mutationObserverAddCallback(addHomepage, ["screen-root"])
     utils.subscribe_endpoint('/lol-gameflow/v1/gameflow-phase', (message) => {
 		let phase = JSON.parse(message["data"])[2]["data"]
 		if (phase == "GameStart" || phase == "InProgress") {
-			document.getElementById("elaina-bg").pause()
+			document.getElementById("isak-bg").pause()
 			document.getElementById("bg-audio").pause()
 		}
 		else {
-			elaina_play_pause()
+			isak_play_pause()
 			audio_play_pause()
 		}
 	})
