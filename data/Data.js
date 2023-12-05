@@ -17,7 +17,7 @@ if(!DataStore.has("wallpaper-volume")){
     DataStore.set("wallpaper-volume",0.0)
 }
 if(!DataStore.has("audio-volume")){
-    DataStore.set("audio-volume",0.3)
+    DataStore.set("audio-volume",0.0)
 }
 if(!DataStore.has("audio-loop")){
     DataStore.set("audio-loop",false)
@@ -32,7 +32,7 @@ if (!DataStore.has("Sidebar-Transparent")) {
 	DataStore.set("Sidebar-Transparent", false)
 }
 if (!DataStore.has("Hide-Champions-Splash-Art")) {
-	DataStore.set("Hide-Champions-Splash-Art", true)
+	DataStore.set("Hide-Champions-Splash-Art", false)
 }
 if (!DataStore.has("Custom-Font")) {
 	DataStore.set("Custom-Font", true)
@@ -50,7 +50,7 @@ if (!DataStore.has("BE")) {
 	DataStore.set("BE", "-69")
 }
 if (!DataStore.has("Custom-Rank-Name")) {
-	DataStore.set("Custom-Rank-Name", true)
+	DataStore.set("Custom-Rank-Name", false)
 }
 if (!DataStore.has("Rank-line1")) {
 	DataStore.set("Rank-line1", "L9")
@@ -62,7 +62,7 @@ if (!DataStore.has("Animate-Loading")) {
 	DataStore.set("Animate-Loading", false)
 }
 if (!DataStore.has("Custom-Avatar")) {
-	DataStore.set("Custom-Avatar", true)
+	DataStore.set("Custom-Avatar", false)
 }
 if (!DataStore.has("Custom-Icon")) {
 	DataStore.set("Custom-Icon", true)
@@ -122,7 +122,7 @@ if (!DataStore.has("Ranked Division ID")) {
 	DataStore.set("Ranked Division ID", 0)
 }
 if (!DataStore.has("Custom-Status")) {
-	DataStore.set("Custom-Status", true)
+	DataStore.set("Custom-Status", false)
 }
 if (!DataStore.has("status-delay")) {
 	DataStore.set("status-delay", 5000)
@@ -155,7 +155,7 @@ if (!DataStore.has("Dev-mode")) {
 	DataStore.set("Dev-mode", false)
 }
 if (!DataStore.has("Custom-rank")) {
-	DataStore.set("Custom-rank", true)
+	DataStore.set("Custom-rank", false)
 }
 if (!DataStore.has("Runes-BG")) {
 	DataStore.set("Runes-BG", true)
@@ -200,7 +200,7 @@ if (!DataStore.has("Custom-Regalia-Banner")) {
 	DataStore.set("Custom-Regalia-Banner", true)
 }
 if (!DataStore.has("Custom-Hover-card-backdrop")) {
-	DataStore.set("Custom-Hover-card-backdrop", true)
+	DataStore.set("Custom-Hover-card-backdrop", false)
 }
 if (!DataStore.has("Debug-mode")) {
 	DataStore.set("Debug-mode", false)
@@ -209,10 +209,10 @@ if (!DataStore.has("Custom-profile-hover")) {
 	DataStore.set("Custom-profile-hover", false)
 }
 if (!DataStore.has("Custom-mastery-score")) {
-	DataStore.set("Custom-mastery-score", true)
+	DataStore.set("Custom-mastery-score", false)
 }
 if (!DataStore.has("Custom-challenge-crystal")) {
-	DataStore.set("Custom-challenge-crystal", true)
+	DataStore.set("Custom-challenge-crystal", false)
 }
 if (!DataStore.has("Mastery-Score")) {
 	DataStore.set("Mastery-Score", 6969)
@@ -236,7 +236,7 @@ if (!DataStore.has(`Force-Update`)) {
 	DataStore.set(`Force-Update`, false)
 }
 if (!DataStore.has("CurrentFont")) {
-	DataStore.set("CurrentFont", "Elaina-Herculanum_Roman.ttf")
+	DataStore.set("CurrentFont", "njnaruto.ttf")
 }
 if (!DataStore.has("prevent-manual-update")) {
 	DataStore.set("prevent-manual-update", false)
