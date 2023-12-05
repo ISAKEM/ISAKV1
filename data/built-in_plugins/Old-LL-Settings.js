@@ -6,9 +6,9 @@ let datapath = new URL("..", import.meta.url).href
 
 try {
 	if (DataStore.get("Dev-mode")) {
-		let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/data/configs/UpdateKey-CDN.js`)
+		let res = await fetch(`//plugins/Server-Data/data/configs/UpdateKey-CDN.js`)
 		if (res.status == 200) {
-			CdnKey = (await (() => import(`//plugins/${getPluginsName()}/Server-Data/data/configs/UpdateKey-CDN.js`))()).default
+			CdnKey = (await (() => import(`//plugins/Server-Data/data/configs/UpdateKey-CDN.js`))()).default
 		}
 	}
 	else {
@@ -30,9 +30,9 @@ catch{console.warn(`File doesn't exist`)}
 
 try  {
 	if (DataStore.get("Dev-mode")) {
-		let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/data/configs/Language.js`)
+		let res = await fetch(`//plugins/Server-Data/data/configs/Language.js`)
 		if (res.status == 200) {
-			lang = (await (() => import(`//plugins/${getPluginsName()}/Server-Data/data/configs/Language.js`))()).default
+			lang = (await (() => import(`//plugins/Server-Data/data/configs/Language.js`))()).default
 		}
 	}
 	else {
@@ -83,7 +83,7 @@ async function createLoaderMenu(root) {
 							<div class="dialog-content">
 								<lol-uikit-content-block class="app-controls-exit-dialog" type="dialog-medium" style="position: relative; overflow: hidden">
 									<div style="position: absolute; top: 60px">
-										<img src="${datapath}assets/Icon/Plugins-icons/LL-Settings.jpg" style="object-fit: cover; width: 290px; transform: scale(1.6); margin-left: 60px; margin-top: -47px; filter: brightness(0.7)">
+										<img src="${datapath}assets/Icon/Plugins-icons/LL-Settings.png" style="object-fit: cover; width: 290px; transform: scale(1.6); margin-left: 60px; margin-top: -47px; filter: brightness(0.7)">
 									</div>
 									</div>
 									<div style="position: relative">

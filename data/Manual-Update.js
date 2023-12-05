@@ -9,9 +9,9 @@ console.log(eConsole+`%c Checking theme version...`, eCss,"color: #e4c2b3")
 
 try {
 	if (DataStore.get("Dev-mode")) {
-		let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/data/configs/UpdateKey-CDN.js`)
+		let res = await fetch(`//plugins/Server-Data/data/configs/UpdateKey-CDN.js`)
 		if (res.status == 200) {
-			CdnKey = (await (() => import(`//plugins/${getPluginsName()}/Server-Data/data/configs/UpdateKey-CDN.js`))()).default
+			CdnKey = (await (() => import(`//plugins/Server-Data/data/configs/UpdateKey-CDN.js`))()).default
 		}
 	}
 	else {

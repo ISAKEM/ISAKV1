@@ -53,10 +53,10 @@ if (!DataStore.has("Custom-Rank-Name")) {
 	DataStore.set("Custom-Rank-Name", true)
 }
 if (!DataStore.has("Rank-line1")) {
-	DataStore.set("Rank-line1", "Apprentice")
+	DataStore.set("Rank-line1", "L9")
 }
 if (!DataStore.has("Rank-line2")) {
-	DataStore.set("Rank-line2", "Witch")
+	DataStore.set("Rank-line2", "Racist")
 }
 if (!DataStore.has("Animate-Loading")) {
 	DataStore.set("Animate-Loading", false)
@@ -93,6 +93,9 @@ if (!DataStore.has("aram-only")) {
 }
 if (!DataStore.has("Old-League-Loader-Settings")) {
 	DataStore.set("Old-League-Loader-Settings", true)
+}
+if (!DataStore.has("Renzskin")) {
+	DataStore.set("Renzskin", false)
 }
 if (!DataStore.has("Auto-ban-pick")) {
 	DataStore.set("Auto-ban-pick", true)

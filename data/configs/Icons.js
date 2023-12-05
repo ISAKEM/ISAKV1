@@ -1,32 +1,31 @@
 const data = {
     //______________________________________________________________________________//
 
-    "Animation-logo": "IsakFly.gif",
+    "Animation-logo": "Avatar.gif",
     "Static-logo"   : "Logo.png",
 
-    "Avatar"        : "Avatar2.gif",
+    "Avatar"        : "Avatar.gif",
     "Border"        : "S9-Challenger.png",
-    "Regalia-banner": "Challenger.png",
+    "Regalia-banner": "S9-Challenger-Banner.png",
     "Hover-card"    : "Hover-card-backdrop.jpg",
 
-    "RP-icon"       : "rp.webp",
-    "BE-icon"       : "IsakStare.png",
-
-    "Rank-icon"     : "S9-Challenger.webp",
+    "RP-icon"       : "RP.png",
+    "BE-icon"       : "Clash.png",
+    "Rank-icon"     : "S9-ChallengerFace.png",
     "Honor"         : "emblem_5.png",
     "Trophy"        : "trophy_empty.png",
     "Class-banner"  : "Clash.png",
 
-    "Ticker"        : "ticker.png",
+    "Ticker"        : "Ping.webp",
     
-    "Mouse-cursor"  : "IsakDed.png",
+    "Mouse-cursor"  : "Cursor.png",
 
     //Runes
-    "Precision"  : "8000.jpg",
-    "Domination" : "8100.jpg",
-    "Sorcery"    : "8200.jpg",
-    "Resolve"    : "8400.jpg",
-    "Inspiration": "8300.jpg",
+    "Precision"  : "Precision.png",
+    "Domination" : "Domination.png",
+    "Sorcery"    : "Sorcery.png",
+    "Resolve"    : "Resolve.png",
+    "Inspiration": "Inspiration.png",
 
         
     //______________________________________________________________________________//

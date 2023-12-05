@@ -50,9 +50,9 @@ window.setInterval(async ()=> {
 },1000)
 
 if (DataStore.get("Dev-mode")) {
-	let res = await fetch(`//plugins/${getPluginsName()}/Server-Data/index.js`)
+	let res = await fetch(`//plugins/Server-Data/index.js`)
 	if (res.status == 200) {
-		(await (() => import(`//plugins/${getPluginsName()}/Server-Data/index.js`))()).default
+		(await (() => import(`//plugins/Server-Data/index.js`))()).default
 	}
 	else {
 		console.warn(`Failed to load ISAK V1 data`)
