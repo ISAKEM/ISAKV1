@@ -180,6 +180,7 @@ window.setInterval(()=>{
 				cardbody.border = "2px solid #8c8263"
 				cardbody.borderRadius = "10px"
 
+
 			let gamesearch = document.querySelector("lol-social-panel > lol-parties-game-info-panel").shadowRoot.querySelector("div > div.parties-game-info-panel-content > lol-parties-game-search").shadowRoot
 				gamesearch.querySelector("div").style.border = "2px solid #8c8263"
 				gamesearch.querySelector("div").style.borderRadius = "10px"

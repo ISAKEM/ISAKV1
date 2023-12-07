@@ -31,10 +31,10 @@ else {
 }
 
 if (!DataStore.has("Wallpaper-list")) {
-	DataStore.set("Wallpaper-list",["Elaina1.webm","Elaina2.webm"])
+	DataStore.set("Wallpaper-list",["Cosmic.mp4"])
 }
 if (!DataStore.has("Audio-list")) {
-	DataStore.set("Audio-list", ["少女レイ-FUMIKIRI ver.flac","If there was an Endpoint.mp3"])
+	DataStore.set("Audio-list", [""])
 }
 if(!DataStore.has('audio-index')){
     DataStore.set('audio-index',0)
