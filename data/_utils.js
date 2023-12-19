@@ -36,6 +36,10 @@ function addFont (folder,font,font_id,font_family) {
 	document.body.appendChild(Font)
 }
 
+function addRegaliaBanner(regaliabanner){
+	let RegaliaBanner = document
+}
+
 function CustomCursor (folder,css) {
 	let cursor = document.createElement("div")
 			cursor.classList.add("cursor")

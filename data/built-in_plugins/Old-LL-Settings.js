@@ -108,7 +108,7 @@ async function createLoaderMenu(root) {
 										</div>
 										<hr class="heading-spacer" />
 										<p style="padding: 20px 0" class="lol-settings-code-of-conduct-link lol-settings-window-size-text">
-											<a href="https://github.com/Elaina69/Elaina-V3/releases" target="_blank">${_t['l.theme_releases']}</a>
+											<a href="https://github.com/ISAKEM/ISAKV1/releases" target="_blank">${_t['l.theme_releases']}</a>
 										</p>
 									</div>
 								</lol-uikit-content-block>

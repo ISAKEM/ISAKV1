@@ -5,6 +5,7 @@ const data = {
     "Static-logo"   : "Logo.png",
 
     "Avatar"        : "Avatar.gif",
+    "Avatar2"       : "Avatar2.gif",
     "Border"        : "S9-Challenger.png",
     "Regalia-banner": "S9-Challenger-Banner.png",
     "Hover-card"    : "Hover-card-backdrop.jpg",

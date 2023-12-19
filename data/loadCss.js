@@ -40,15 +40,16 @@ let loadCss = async (node) => {
 					document.querySelector(".style-profile-emblem-subheader-ranked > div").innerHTML = DataStore.get("Rank-line2")
 				}catch{}
 			}
+			//Profile Avatar
             if (DataStore.get("Custom-Icon") && DataStore.get("Custom-Avatar")) {
                 try {
-					document.querySelector("lol-regalia-profile-v2-element").shadowRoot.querySelector("div.regalia-profile-crest-hover-area.picker-enabled > lol-regalia-crest-v2-element").shadowRoot.querySelector("uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar)"
+					document.querySelector("lol-regalia-profile-v2-element").shadowRoot.querySelector("div.regalia-profile-crest-hover-area.picker-enabled > lol-regalia-crest-v2-element").shadowRoot.querySelector("uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar2)"
 				}catch {}
             }
 			if (DataStore.get("Custom-Icon") && DataStore.get("Custom-Regalia-Banner")) {
 				try {
 					document.querySelector("lol-regalia-profile-v2-element").shadowRoot.querySelector("lol-regalia-banner-v2-element").
-						shadowRoot.querySelector("uikit-state-machine > div:nth-child(2) > img").src = `${datapath}assets/Icon/Regalia-Banners/${icdata["Regalia-banner"]}`
+						shadowRoot.querySelector("uikit-state-machine > div:nth-child(2) > img").src = `${datapath}assets/Icon/Regalia-Banners/${DataStore.get("CurrentRegaliaBanner")}`
 				}catch {}
 			}
         }, 100)
@@ -209,23 +210,23 @@ window.setInterval(()=>{
 			}
 		}catch{}
 	}
-
+	//Lobby Avatar
 	if (DataStore.get("Custom-Icon") && DataStore.get("Custom-Avatar")) {
 		try {
 			document.querySelector("lol-uikit-full-page-backdrop lol-regalia-identity-customizer-element").shadowRoot.
 				querySelector("div.regalia-identity-customizer-crest-wrapper > lol-regalia-crest-v2-element").shadowRoot.
-				querySelector("uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar)"
+				querySelector("uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar2)"
 		}catch {}
 		try {
 			document.querySelector("#lol-uikit-tooltip-root div.hover-card-info-container").style.background = "#1a1c21"
 			document.querySelector(`#lol-uikit-tooltip-root lol-regalia-hovercard-v2-element[summoner-id="${DataStore.get("Summoner-ID")}"]`).shadowRoot.
 				querySelector("lol-regalia-crest-v2-element").shadowRoot.
-				querySelector("div > uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar)"
+				querySelector("div > uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar2)"
 		}catch {}
 		try {
 			document.querySelector("div.lobby-banner.local > lol-regalia-parties-v2-element").shadowRoot.
 				querySelector("div.regalia-parties-v2-crest-wrapper > lol-regalia-crest-v2-element").shadowRoot.
-				querySelector("uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar)"
+				querySelector("uikit-state-machine > div.lol-regalia-summoner-icon-mask-container > div").style.backgroundImage = "var(--Avatar2)"
 		}catch {}
 	}
 
@@ -260,12 +261,12 @@ window.setInterval(()=>{
 		try {
 			document.querySelector("div.lobby-banner.local > lol-regalia-parties-v2-element").shadowRoot.
 				querySelector("lol-regalia-banner-v2-element").shadowRoot.
-				querySelector("uikit-state-machine > div:nth-child(2) > img").src = `${datapath}assets/Icon/Regalia-Banners/${icdata["Regalia-banner"]}`
+				querySelector("uikit-state-machine > div:nth-child(2) > img").src = `${datapath}assets/Icon/Regalia-Banners/${DataStore.get("CurrentRegaliaBanner")}`
 		}catch{}
 		try {
 			document.querySelector("lol-uikit-full-page-backdrop lol-regalia-identity-customizer-element").shadowRoot.
 				querySelector("lol-regalia-banner-v2-element").shadowRoot.
-				querySelector("uikit-state-machine > div:nth-child(2) > img").src = `${datapath}assets/Icon/Regalia-Banners/${icdata["Regalia-banner"]}`
+				querySelector("uikit-state-machine > div:nth-child(2) > img").src = `${datapath}assets/Icon/Regalia-Banners/${DataStore.get("CurrentRegaliaBanner")}`
 		}catch{}
 	}
 }, 500)
@@ -286,6 +287,9 @@ window.addEventListener("load", ()=> {
 	if (DataStore.get("Custom-Icon")) {
 		if (DataStore.get("Custom-Avatar")) {
 			utils.addCss("--Avatar",`${datapath}assets/Icon`,icdata["Avatar"],`${datapath}assets/Css/Addon-Css/Icon/Avatar.css`)
+		}
+		if (DataStore.get("Custom-Avatar")) {
+			utils.addCss("--Avatar2",`${datapath}assets/Icon`,icdata["Avatar2"],`${datapath}assets/Css/Addon-Css/Icon/Avatar.css`)
 		}
 		if (DataStore.get("Custom-RP-Icon")) {
 			utils.addCss("--RP-Icon",`${datapath}assets/Icon`,icdata["RP-icon"],`${datapath}assets/Css/Addon-Css/Icon/RiotPoint.css`)
@@ -334,6 +338,6 @@ window.addEventListener("load", ()=> {
 	else {
 		utils.addCss("","","",`${datapath}assets/Css/Addon-Css/Sidebar-Color.css`)
 	}
-    utils.addCss("","","",`${datapath}assets/Css/ElainaV3.css`)
+    utils.addCss("","","",`${datapath}assets/Css/ISAKV1.css`)
 	utils.mutationObserverAddCallback(loadCss, ["screen-root"])
 })

@@ -238,6 +238,9 @@ if (!DataStore.has(`Force-Update`)) {
 if (!DataStore.has("CurrentFont")) {
 	DataStore.set("CurrentFont", "njnaruto.ttf")
 }
+if (!DataStore.has("CurrentRegaliaBanner")) {
+	DataStore.set("CurrentRegaliaBanner", "S9-Challenger-Banner.png")
+}
 if (!DataStore.has("prevent-manual-update")) {
 	DataStore.set("prevent-manual-update", false)
 }
