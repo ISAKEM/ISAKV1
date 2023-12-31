@@ -59,10 +59,10 @@ if (!DataStore.has("Rank-line2")) {
 	DataStore.set("Rank-line2", "Racist")
 }
 if (!DataStore.has("Animate-Loading")) {
-	DataStore.set("Animate-Loading", false)
+	DataStore.set("Animate-Loading", true)
 }
 if (!DataStore.has("Custom-Avatar")) {
-	DataStore.set("Custom-Avatar", false)
+	DataStore.set("Custom-Avatar", true)
 }
 if (!DataStore.has("Custom-Icon")) {
 	DataStore.set("Custom-Icon", true)
@@ -86,7 +86,7 @@ if (!DataStore.has("hide-vertical-lines")) {
 	DataStore.set("hide-vertical-lines", true)
 }
 if (!DataStore.has("auto_accept")) {
-	DataStore.set("auto_accept", false)
+	DataStore.set("auto_accept", true)
 }
 if (!DataStore.has("aram-only")) {
     DataStore.set("aram-only", false)
@@ -95,7 +95,7 @@ if (!DataStore.has("Old-League-Loader-Settings")) {
 	DataStore.set("Old-League-Loader-Settings", true)
 }
 if (!DataStore.has("Renzskin")) {
-	DataStore.set("Renzskin", false)
+	DataStore.set("Renzskin", true)
 }
 if (!DataStore.has("Auto-ban-pick")) {
 	DataStore.set("Auto-ban-pick", true)
@@ -200,7 +200,7 @@ if (!DataStore.has("Custom-Regalia-Banner")) {
 	DataStore.set("Custom-Regalia-Banner", true)
 }
 if (!DataStore.has("Custom-Hover-card-backdrop")) {
-	DataStore.set("Custom-Hover-card-backdrop", false)
+	DataStore.set("Custom-Hover-card-backdrop", true)
 }
 if (!DataStore.has("Debug-mode")) {
 	DataStore.set("Debug-mode", false)
@@ -236,7 +236,7 @@ if (!DataStore.has(`Force-Update`)) {
 	DataStore.set(`Force-Update`, false)
 }
 if (!DataStore.has("CurrentFont")) {
-	DataStore.set("CurrentFont", "njnaruto.ttf")
+	DataStore.set("CurrentFont", "X360.ttf")
 }
 if (!DataStore.has("CurrentRegaliaBanner")) {
 	DataStore.set("CurrentRegaliaBanner", "S9-Challenger-Banner.png")
