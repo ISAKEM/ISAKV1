@@ -1045,5 +1045,9 @@ div[data-screen-name="rcp-fe-lol-tft"] .tft-sub-nav-container {
 #pandoru {
 	margin-bottom: 17px;
 }
+
+.player-history-stats-kills {
+	width: auto !important;
+}
 /*_________________________________________________________________________________________________________________________________*/
 /* End */
